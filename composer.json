@@ -1,0 +1,23 @@
+{
+    "name": "yajukumar/stratum-dialerapi",
+    "type": "project",
+    "description": "The Stratum Php Framework.",
+    "keywords": ["framework", "stratum"],
+    "license": "MIT",
+    "require": {
+        "php": "^7.3|^8.0"
+    },
+    "autoload": {        
+        "psr-0": {
+            "Stratum": "core/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "authors": [
+        {
+            "name": "Yajukumar",
+            "email": "yajukumar@gmail.com"
+        }
+    ]
+}
