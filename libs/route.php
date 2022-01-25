@@ -5,6 +5,7 @@ require 'classes/dbInfo.php';
 require 'classes/diskinfo.php';
 require 'classes/sqlite3.php';
 require 'classes/cdr.php';
+require 'classes/update.php';
 
 class Route{
 
@@ -32,6 +33,7 @@ class Route{
                       'removeDatabases' => 'sqlite3',
                       'testSqlite3' => 'sqlite3',
                       'dms' => 'Cdr',
+                      'updateComposer' => 'Update',
                     ];
   }
 
