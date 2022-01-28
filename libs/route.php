@@ -27,6 +27,7 @@ class Route{
                       'getConnection' => 'DbInfo',
                       'connectionList' => 'DbInfo',
                       'kill' => 'DbInfo',
+                      'dbBackupFilesCount' => 'DbInfo',
                       'df' => 'DiskInfo',
                       'showDatabases' => 'sqlite3',
                       'createDatabases' => 'sqlite3',

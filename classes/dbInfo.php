@@ -37,6 +37,12 @@ class DbInfo{
         $api_result['kill_process'] = "Process Killed: ".$_GET['kill'];
         echo json_encode($api_result);
     }
+
+    public function dbBackupFilesCount(){
+        $fi = new \FilesystemIterator('/var/www/dialer_jobs/data/', \FilesystemIterator::SKIP_DOTS);
+        printf("There were %d Files in backup directory.", iterator_count($fi));
+        exit;
+    }
 }
 
 
