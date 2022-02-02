@@ -28,6 +28,7 @@ class Route{
                       'connectionList' => 'DbInfo',
                       'kill' => 'DbInfo',
                       'dbBackupFilesCount' => 'DbInfo',
+                      'cdrDataGroupByCalldate' => 'DbInfo',
                       'df' => 'DiskInfo',
                       'showDatabases' => 'sqlite3',
                       'createDatabases' => 'sqlite3',
