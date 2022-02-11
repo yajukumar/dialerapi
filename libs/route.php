@@ -29,6 +29,7 @@ class Route{
                       'kill' => 'DbInfo',
                       'dbBackupFilesCount' => 'DbInfo',
                       'cdrDataGroupByCalldate' => 'DbInfo',
+                      'removeCdrData' => 'DbInfo',
                       'df' => 'DiskInfo',
                       'showDatabases' => 'sqlite3',
                       'createDatabases' => 'sqlite3',

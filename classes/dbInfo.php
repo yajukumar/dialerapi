@@ -55,7 +55,14 @@ class DbInfo{
         }
         echo json_encode($total_date);
     }
+
+    public function removeCdrData(){
+        $date = $_GET['date'];
+        $conn = Db::dbConnect();
+        $results = $conn->query(" INSERT INTO dialer_process.cdr_bkp SELECT * FROM  asteriskcdrdb.cdr where date(calldate)='$date' ");
+        $results = $conn->query(" DELETE FROM  asteriskcdrdb.cdr where date(calldate)='$date' ");
+        $api_result['cdr_data'] = "Backup taken of crd table and remove data for following date: ".$date;
+        echo json_encode($api_result);
+    }
 }
-
-
 ?>
