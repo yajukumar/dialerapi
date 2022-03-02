@@ -61,6 +61,10 @@ class DbInfo{
         $conn = Db::dbConnect();
         $results = $conn->query(" INSERT INTO dialer_process.cdr_bkp SELECT * FROM  asteriskcdrdb.cdr where date(calldate)='$date' ");
         $results = $conn->query(" DELETE FROM  asteriskcdrdb.cdr where date(calldate)='$date' ");
+        $results = $conn->query(" DELETE FROM call_center.call_progress_log where id_call_outgoing in (SELECT id FROM call_center.calls where date(fecha_llamada) = '$date') ");
+        $results = $conn->query(" DELETE FROM call_center.call_attribute where id_call in (SELECT id FROM call_center.calls where date(fecha_llamada) = '$date') ");
+        $results = $conn->query(" DELETE FROM call_center.call_recording where id_call_outgoing in (SELECT id FROM call_center.calls where date(fecha_llamada) = '$date') ");
+        $results = $conn->query(" DELETE FROM call_center.calls where date(fecha_llamada) = '$date' ");
         $api_result['cdr_data'] = "Backup taken of crd table and remove data for following date: ".$date;
         echo json_encode($api_result);
     }
