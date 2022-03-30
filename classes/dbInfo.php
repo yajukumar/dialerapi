@@ -39,7 +39,7 @@ class DbInfo{
     }
 
     public function dbBackupFilesCount(){
-        $fi = new \FilesystemIterator('/var/www/dialer_automation/db_backup/', \FilesystemIterator::SKIP_DOTS);
+        $fi = new \FilesystemIterator('/var/www/dialer_jobs/data/', \FilesystemIterator::SKIP_DOTS);
         printf("There were %d Files in backup directory.", iterator_count($fi));
         exit;
     }
