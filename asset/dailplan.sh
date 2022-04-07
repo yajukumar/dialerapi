@@ -11,3 +11,5 @@ echo "Stash@2050" | sudo -S asterisk -rx"sip reload all"
 echo "Stash@2050" | sudo -S asterisk -rx"reload"
 echo "Stash@2050" | sudo -S asterisk -rx"module reload"
 echo "Stash@2050" | sudo -S asterisk -rx"queue reload all"
+
+#@reboot sleep 60 && /var/www/html/stratum/api/asset/dailplan.sh
